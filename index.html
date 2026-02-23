@@ -6,24 +6,15 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Will Lieber</title>
 
-    <!-- 
-        WHY THIS FONT: Cormorant Garamond is an elegant serif that signals 
-        sophistication and intentionality — perfect for a referral-only practice.
-        We pair it with a clean sans-serif (DM Sans) for body text readability.
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================
-           CSS VARIABLES — WHY: Makes it easy for you 
-           to tweak colors/fonts in one place later.
-           ============================================ */
         :root {
             --color-bg: #FAFAFA;
             --color-text: #1A1A1A;
-            --color-text-secondary: #555555;
+            --color-text-secondary: #333333;
             --color-accent: #2C2C2C;
             --color-border: #E0E0E0;
             --color-highlight: #F5F5F0;
@@ -31,11 +22,6 @@
             --font-body: 'DM Sans', -apple-system, sans-serif;
         }
 
-        /* ============================================
-           RESET & BASE — WHY: Browsers add default 
-           margins/padding. This zeroes them out so 
-           our spacing is intentional, not accidental.
-           ============================================ */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -56,11 +42,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ============================================
-           LAYOUT — WHY: max-width keeps text readable 
-           on wide screens (long lines are hard to read).
-           Padding gives breathing room on mobile.
-           ============================================ */
         .container {
             max-width: 680px;
             margin: 0 auto;
@@ -71,11 +52,6 @@
             padding: 72px 0;
         }
 
-        /* ============================================
-           NAVIGATION — WHY: A subtle top bar with your 
-           name grounds the page. Fixed so it's always 
-           accessible. Minimal — no hamburger menus.
-           ============================================ */
         nav {
             position: fixed;
             top: 0;
@@ -123,30 +99,34 @@
             color: var(--color-text);
         }
 
-        /* ============================================
-           HERO SECTION — WHY: First impression. Photo 
-           + name + one-liner. Nothing else. Let the 
-           visitor orient themselves before scrolling.
-           ============================================ */
         .hero {
             padding-top: 160px;
             padding-bottom: 80px;
             text-align: center;
         }
 
-      .hero-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 55% center;
-    margin-bottom: 36px;
-    filter: grayscale(15%);
-    border: 3px solid var(--color-border);
-}
+        .hero-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 55% center;
+            margin-bottom: 36px;
+            filter: grayscale(15%);
+            border: 3px solid var(--color-border);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
 
         .hero .tagline {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: var(--color-text-secondary);
             font-weight: 300;
             max-width: 480px;
@@ -165,11 +145,6 @@
             border-radius: 2px;
         }
 
-        /* ============================================
-           SECTION HEADINGS — WHY: Consistent styling 
-           with a subtle divider creates visual rhythm 
-           as the visitor scrolls through sections.
-           ============================================ */
         .section-label {
             font-size: 0.75rem;
             letter-spacing: 0.14em;
@@ -197,14 +172,9 @@
         p {
             margin-bottom: 18px;
             color: var(--color-text-secondary);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
         }
 
-        /* ============================================
-           DIVIDER — WHY: A thin line between sections 
-           adds structure without heaviness. Matches 
-           the minimal, editorial feel.
-           ============================================ */
         .divider {
             border: none;
             border-top: 1px solid var(--color-border);
@@ -212,11 +182,8 @@
             max-width: 120px;
         }
 
-        /* ============================================
-           ABOUT SECTION 
-           ============================================ */
         .about p {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             line-height: 1.8;
         }
 
@@ -238,12 +205,6 @@
             font-weight: 400;
         }
 
-        /* ============================================
-           SERVICES SECTION — WHY: Two distinct cards 
-           make it immediately clear these are separate 
-           offerings. The subtle background differentiates 
-           them from the rest of the page.
-           ============================================ */
         .services-grid {
             display: grid;
             gap: 32px;
@@ -262,24 +223,18 @@
         }
 
         .service-card p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             line-height: 1.75;
             margin-bottom: 0;
         }
 
         .service-card .service-note {
             margin-top: 18px;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             font-style: italic;
             color: var(--color-text-secondary);
         }
 
-        /* ============================================
-           PHILOSOPHY SECTION — WHY: This is the heart 
-           of your page. Slightly different styling 
-           (italic lead-in, more breathing room) to 
-           signal that this is personal, not transactional.
-           ============================================ */
         .philosophy {
             background: var(--color-highlight);
             border-top: 1px solid var(--color-border);
@@ -296,12 +251,6 @@
             margin-bottom: 22px;
         }
 
-        /* ============================================
-           CONTACT SECTION — WHY: Clear call to action. 
-           The Google Form link is styled as a prominent 
-           button. Email is secondary — most people 
-           should go through the form.
-           ============================================ */
         .contact {
             text-align: center;
         }
@@ -350,10 +299,6 @@
             border-color: var(--color-text);
         }
 
-        /* ============================================
-           FOOTER — WHY: Just a quiet sign-off. No 
-           clutter, no unnecessary links.
-           ============================================ */
         footer {
             padding: 40px 0;
             text-align: center;
@@ -366,12 +311,6 @@
             letter-spacing: 0.04em;
         }
 
-        /* ============================================
-           ANIMATIONS — WHY: Subtle fade-in on scroll 
-           makes the page feel alive without being 
-           distracting. Purely cosmetic, degrades 
-           gracefully if JS is disabled.
-           ============================================ */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -383,11 +322,6 @@
             transform: translateY(0);
         }
 
-        /* ============================================
-           RESPONSIVE — WHY: Many visitors will be on 
-           phones (students!). These adjustments ensure 
-           readability on smaller screens.
-           ============================================ */
         @media (max-width: 640px) {
             .hero h1 {
                 font-size: 2.1rem;
@@ -407,8 +341,8 @@
             }
 
             .hero-photo {
-                width: 130px;
-                height: 130px;
+                width: 170px;
+                height: 170px;
             }
 
             nav .nav-links {
@@ -436,9 +370,6 @@
 </head>
 <body>
 
-    <!-- ==========================================
-         NAVIGATION
-         ========================================== -->
     <nav>
         <div class="container">
             <a href="#" class="name">Will Lieber</a>
@@ -451,15 +382,8 @@
         </div>
     </nav>
 
-    <!-- ==========================================
-         HERO — Your first impression
-         ========================================== -->
     <section class="hero">
         <div class="container">
-            <!-- 
-                REPLACE THIS: Swap "headshot.jpg" with your actual photo filename.
-                Place the photo file in the same folder as this HTML file.
-            -->
             <img src="headshot.png" alt="Will Lieber" class="hero-photo">
             <h1>Will Lieber</h1>
             <p class="tagline">College admissions and success coaching for students ready to discover and articulate who they are.</p>
@@ -469,9 +393,6 @@
 
     <hr class="divider">
 
-    <!-- ==========================================
-         ABOUT
-         ========================================== -->
     <section id="about" class="about fade-in">
         <div class="container">
             <p class="section-label">About</p>
@@ -488,9 +409,6 @@
 
     <hr class="divider">
 
-    <!-- ==========================================
-         SERVICES
-         ========================================== -->
     <section id="services" class="fade-in">
         <div class="container">
             <p class="section-label">Services</p>
@@ -503,7 +421,7 @@
                 </div>
                 <div class="service-card">
                     <h3>College Success Coaching</h3>
-                    <p>Many students feel overwhelmed by the transition to college — or by the transitions within it: sophomore to junior year, beginning to recruit for jobs, finding community. As a transfer student, I experienced this myself. Success coaching means having someone who checks in with you, points you in the right direction, and helps you stay on track with deadlines, next steps, and personal growth.</p>
+                    <p>Many students feel overwhelmed by the transition to college or by the transitions within it: sophomore to junior year, beginning to recruit for jobs, finding community. As a transfer student, I experienced this myself. Success coaching means having someone who checks in with you, points you in the right direction, and helps you stay on track with deadlines, next steps, and personal goals.</p>
                     <p class="service-note">Some clients transition from admissions coaching to success coaching as they move from one stage of education to the next.</p>
                 </div>
             </div>
@@ -512,55 +430,35 @@
 
     <hr class="divider">
 
-    <!-- ==========================================
-         PHILOSOPHY
-         ========================================== -->
     <section id="philosophy" class="philosophy fade-in">
         <div class="container">
             <p class="section-label">Philosophy</p>
             <p class="lead">"My goal is to guide students towards becoming the best they can be — not to be defined by admission committees, but to grow in their understanding of themselves."</p>
-            <p>I'm the oldest of four siblings, and my youngest brother has a learning disability. I am sensitive to how admissions can feel like a statement on one's worth. The process is stressful, and the stakes feel enormous — but the outcome of any single application does not define who you are.</p>
-            <p>I work with students to help them see themselves clearly, tell their story with confidence, and approach what comes next with intention.</p>
+            <p>I'm the oldest of four siblings, and my youngest brother has a learning disability. I am sensitive to how admissions can feel like a statement on one's worth. I want the best oucomes for students, but I also want the process to feel like it is inherently worth something.</p>
+            <p>I hope reflection for college applications can students to help them see themselves clearly, tell their story with confidence, and approach what comes next with intention.</p>
+            <p>The ability to your story has value far beyond admission to a specefic program.</p>
         </div>
     </section>
 
-    <!-- ==========================================
-         CONTACT
-         ========================================== -->
     <section id="contact" class="contact fade-in">
         <div class="container">
             <p class="section-label">Inquire</p>
             <h2>Work With Me</h2>
-            <p>I take on a small number of students each cycle through referral only. If you've been referred and are interested in working together, please fill out the inquiry form below.</p>
+            <p>I take on a small number of students each cycle through referral only. If you are interested in working together, please fill out the inquiry form below.</p>
 
-            <!-- 
-                REPLACE THIS: Swap the # in the href with your actual Google Form URL.
-                Example: href="https://forms.gle/yourformid"
-            -->
             <a href="https://docs.google.com/forms/d/1ji4E6M7xogLF1zCicSY-lT2BW0X3xQVwlysFRRtSrrU/viewform" target="_blank" class="cta-button">Submit an Inquiry</a>
 
             <p class="contact-email">Questions? Reach me at <a href="mailto:wlieber3005@gmail.com">wlieber3005@gmail.com</a></p>
         </div>
     </section>
 
-    <!-- ==========================================
-         FOOTER
-         ========================================== -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Will Lieber. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- ==========================================
-         JAVASCRIPT — WHY: Just handles the subtle 
-         fade-in animation on scroll. If you delete 
-         this, the page still works — things just 
-         won't animate in. No frameworks, no libraries.
-         ========================================== -->
     <script>
-        // IntersectionObserver watches for elements entering the viewport
-        // and adds a "visible" class to trigger the CSS fade-in animation.
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -568,10 +466,9 @@
                 }
             });
         }, {
-            threshold: 0.15 // Triggers when 15% of the element is visible
+            threshold: 0.15
         });
 
-        // Apply observer to all elements with the "fade-in" class
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 
